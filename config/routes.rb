@@ -1,19 +1,14 @@
 Rails.application.routes.draw do
-  get 'items/new'
-  get 'items/edit'
-  get 'items/show'
-  get 'items/index'
-  get 'owners/new'
-  get 'owners/edit'
-  get 'owners/show'
-  get 'owners/index'
+
   root 'pages#home'
 
   resources :users
   resources :restaurants
   resources :owners
+  resources :items
 
   get "/register-owner", to: 'owners#new'
+  get "/new-item", to: 'items#new'
   get "/signup", to: 'users#new'
 
   get "/faq", to: 'pages#faq'

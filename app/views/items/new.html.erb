@@ -1,2 +1,18 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<h1>New Item</h1>
+<%= form_for(@item) do |f| %>
+Name<br>
+<%= f.text_field :name %><br>
+
+description
+<%= f.text_field :description %><br>
+
+Price<br>
+<%= f.text_field :price %><br>
+
+What Restaurant? <br>
+<%= f.number_field :restaurant_id %>
+<p>
+  
+<%= f.submit "Create Item" %>
+</p>
+<% end %>

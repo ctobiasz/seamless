@@ -1,2 +1,15 @@
 <h1><%= @restr.name %></h1>
 <h3>owned by: <%= @restr.owner.first_name %> <%= @restr.owner.last_name %></h3>
+<h3><%= link_to "create a new item", new_item_path(restr_id: @restr.id) %>
+
+  <br>
+
+
+  <% @restr.items.each do |i| %>
+  <p>
+    <%= i.name %><br>
+    <%= i.description %><br>
+    <% i.restaurant %><br>
+  </p>
+
+  <% end %>
