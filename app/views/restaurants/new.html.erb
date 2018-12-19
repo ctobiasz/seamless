@@ -1,0 +1,20 @@
+<h1>Create your Restaurant</h1>
+
+
+<%= form_for(@restaurant) do |f| %>
+
+<label>Name of Restaurant </label><br>
+<%= f.text_field :name%> <br>
+
+<label>Address </label><br>
+<%= f.text_field :address%><br>
+
+<label>Who owns this restaurant? </label><br>
+<%= f.number_field :owner_id%><br>
+
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
